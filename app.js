@@ -27,13 +27,13 @@ const setCategory = async (i) => {
 const sendToLibrary = (data, cname) => {
     if (currentCategory.name !== cname) return
     nextQuery = data.data?.next_query.max
-    // console.log(nextQuery);
     loadingicon.classList.value = nextQuery > 0 ? "loading-icon" : "loading-icon max"
     const images = data.data?.list
     images.forEach((image) => {
+        console.log(image);
         library.innerHTML +=
             `
-                <div class="image">
+                <div class="image" id="${image.udId}">
                     <div class="buttons">
                 <a target="_blank"
                     href="${(image.url).toString()}"
@@ -44,7 +44,7 @@ const sendToLibrary = (data, cname) => {
                     <img src="https://img.icons8.com/?size=100&id=14100&format=png&color=eeeeee" alt="">
                 </div>
                 </div>
-                <img src="${image.url}" alt="">
+                <img src="${image.overviewUrl}" alt="">
             </div>
 
             `
