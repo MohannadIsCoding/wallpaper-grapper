@@ -30,7 +30,6 @@ const sendToLibrary = (data, cname) => {
     loadingicon.classList.value = nextQuery > 0 ? "loading-icon" : "loading-icon max"
     const images = data.data?.list
     images.forEach((image) => {
-        console.log(image);
         library.innerHTML +=
             `
                 <div class="image" id="${image.udId}">
