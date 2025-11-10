@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+a {
+    display: none;
+}
+
+body {
+    background-color: #050505;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Inter";
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+.library {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    /* padding: 1% 0; */
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
+
+    & .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        /* margin: 0.5rem 0.75rem; */
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: all 0.2s ease;
+
+        & .buttons {
+            position: absolute;
+            display: flex;
+            gap: 0.75rem;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+
+            & .button {
+                display: flex;
+                height: 1.5rem;
+                padding: 0.75rem;
+                background: #77777788;
+                border-radius: 4px;
+                backdrop-filter: blur(4px);
+                -webkit-backdrop-filter: blur(5px);
+                cursor: pointer;
+                transition: background 0.2s ease;
+
+                &:hover {
+                    background: #94949488;
+                }
+
+                & img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        &:hover .buttons {
+            opacity: 1;
+        }
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            object-fit: cover;
+            overflow: hidden;
+        }
+    }
+}
+
+.dock {
+    display: flex;
+    position: fixed;
+    bottom: 3%;
+    padding: 1rem 0.5rem;
+    background: #25252588;
+    border-radius: 50px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 0.3s ease-in-out;
+    width: auto;
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0.75rem 0.0rem;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        height: 0;
+        width: auto;
+        transition: all 0.3s ease-in-out;
+
+        li {
+            padding: 0.5rem 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            gap: 0.5rem;
+            width: auto;
+            height: auto;
+            transition: all 0.25s ease;
+            overflow: hidden;
+            cursor: pointer;
+
+            .title {
+                color: #eee;
+                font-size: 0.9rem;
+                visibility: hidden;
+                display: none;
+                max-width: 0;
+                transition: all 0.5s ease;
+            }
+
+            .icon {
+                opacity: 75%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            &.selected {
+                background: #00000085;
+                max-width: fit-content;
+                padding: 0.5rem 1.0rem;
+
+                .title {
+                    max-width: 100%;
+                    visibility: visible;
+                    display: flex;
+                    transition: all 0.5s ease;
+                }
+
+                .icon {
+                    opacity: 100%;
+                }
+            }
+
+            &:hover {
+                background: #00000044;
+                max-width: fit-content;
+
+
+                .icon {
+                    opacity: 100%;
+                }
+            }
+
+        }
+    }
+}
+
+.loading-icon {
+    height: 1fr;
+    padding: 4% 0;
+    display: flex;
+    flex: 1;
+
+    & img {
+        width: 24px;
+        height: 24px;
+        animation-name: loading;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    &.max {
+        display: none;
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
