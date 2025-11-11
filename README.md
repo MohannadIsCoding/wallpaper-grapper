@@ -2,9 +2,9 @@
 
 # _**4K Wallpaper Library**_
 
-![html](https://img.shields.io/badge/HTML5-25.8%25-e34c26)
-![css](https://img.shields.io/badge/CSS-40.5%25-blue)
-![js](https://img.shields.io/badge/JavaScript-33.7%25-f4dc12)
+![html](https://img.shields.io/badge/HTML5-37.0%25-e34c26)
+![css](https://img.shields.io/badge/CSS-34.5%25-blue)
+![js](https://img.shields.io/badge/JavaScript-28.5%25-f4dc12)
 
 ![commit](https://img.shields.io/github/last-commit/MohannadIsCoding/wallpaper-grapper?style=flat&logo=git&logoColor=white&color=0080ff)
 
