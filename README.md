@@ -12,7 +12,7 @@ A responsive, modern web app that displays and allows users to browse and downlo
 Built using HTML, CSS, and JavaScript, this app fetches live images from an external wallpaper API and provides a smooth infinite scroll experience.
 
 
-- *[4K Wallpaper Library](https://mohannadiscoding.github.io/wallpaper-grapper/)*
+- *[4K Wallpaper Library](https://mohannadiscoding.github.io/wallpaper-library/)*
 
 ![App Screenshot](https://raw.githubusercontent.com/MohannadIsCoding/wallpaper-library/refs/heads/master/preview/previewImage.png)
 
